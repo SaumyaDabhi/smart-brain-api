@@ -11,12 +11,12 @@ const image = require('./controllers/image');
 
 const db = knex({
   client: 'pg',
-  connection: {
+  connection: process.env.DATABASE_URL /* {
     host : 'dpg-cfv6n8d3t39doaoldm20-a',
     user : 'smart_brain_database_z55x_user',
     password : 'Q1YiHCTnjOjFxodkHD1X2C50e3HjIanf',
     database : 'smart_brain_database_z55x'
-  }
+  } */
 });
 
 const app = express();
